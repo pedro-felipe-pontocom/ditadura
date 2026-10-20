@@ -1,0 +1,67 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Modo apresentador · Hoje é Dia de El-Rey</title>
+    <meta name="robots" content="noindex" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%230f0e0c'/%3E%3Cpath d='M4 11.5l24-1.2v5.4L4 16.9z' fill='%23ebe4d6'/%3E%3C/svg%3E" />
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/presenter.css" />
+  </head>
+  <body>
+    <header class="topo">
+      <p class="marca">Modo apresentador</p>
+      <p class="conexao" id="conexao">procurando a apresentação…</p>
+      <p class="relogio" id="relogio">--:--</p>
+    </header>
+
+    <main class="painel">
+      <section class="col-atual">
+        <div class="rotulo">
+          <span class="etiqueta">Agora</span>
+          <span id="atual-titulo">–</span>
+          <span class="passo" id="atual-passo"></span>
+        </div>
+        <p class="quem" id="atual-quem"></p>
+        <div class="tela" id="tela-atual"><iframe id="prev-atual" title="Slide atual" tabindex="-1"></iframe></div>
+        <section class="notas">
+          <h2>Notas de fala</h2>
+          <div id="notas" class="notas-texto"></div>
+        </section>
+      </section>
+
+      <section class="col-lado">
+        <div class="rotulo">
+          <span class="etiqueta">Próximo slide</span>
+          <span id="prox-titulo">–</span>
+        </div>
+        <p class="quem" id="prox-quem"></p>
+        <div class="tela pequena" id="tela-prox"><iframe id="prev-prox" title="Próximo slide" tabindex="-1"></iframe></div>
+
+        <div class="bloco cronometro">
+          <span class="etiqueta">Tempo de apresentação</span>
+          <p class="crono" id="crono">00:00</p>
+          <div class="botoes">
+            <button id="crono-btn" type="button">iniciar</button>
+            <button id="crono-zerar" type="button">zerar</button>
+          </div>
+        </div>
+
+        <div class="bloco audio">
+          <span class="etiqueta">Música</span>
+          <p class="au-linha"><button id="au-btn" type="button">tocar</button> <span id="au-tempo">–</span> <span id="au-modo" class="au-modo"></span></p>
+        </div>
+
+        <div class="bloco nav">
+          <button id="nav-ant" type="button">← anterior</button>
+          <button id="nav-prox" type="button" class="principal">próximo →</button>
+          <button id="nav-black" type="button">tela preta (B)</button>
+        </div>
+        <p class="atalhos">Setas / espaço / PageUp-PageDown navegam também nesta janela. K toca/pausa.</p>
+      </section>
+    </main>
+
+    <script type="module" src="js/presenter.js"></script>
+  </body>
+</html>

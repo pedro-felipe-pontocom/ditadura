@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="pt-BR">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover" />
+    <title>Hoje é Dia de El-Rey · censura e voz</title>
+    <meta name="description" content="Apresentação de História: “Hoje é Dia de El-Rey” (Milton Nascimento e Márcio Borges, 1973), a canção que teve a letra vetada pela censura da ditadura e foi gravada só com a voz." />
+    <meta name="theme-color" content="#0f0e0c" />
+    <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'%3E%3Crect width='32' height='32' fill='%23ebe4d6'/%3E%3Cpath d='M4 11.5l24-1.2v5.4L4 16.9z' fill='%2311100e'/%3E%3Cpath d='M4 20.2l17-.6v4.2l-17 .5z' fill='%2311100e'/%3E%3C/svg%3E" />
+
+    <link rel="preload" href="assets/fonts/big-shoulders-display-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/newsreader-normal-latin.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="assets/fonts/newsreader-italic-latin.woff2" as="font" type="font/woff2" crossorigin />
+
+    <link rel="stylesheet" href="css/fonts.css" />
+    <link rel="stylesheet" href="css/base.css" />
+    <link rel="stylesheet" href="css/slides.css" />
+  </head>
+  <body class="carregando" data-tema="papel">
+    <!-- A voz: serra desenhada pelo AnalyserNode (js/voz.js) -->
+    <canvas id="voz" aria-hidden="true"></canvas>
+
+    <!-- Os slides são montados aqui por js/render.js a partir de content/ -->
+    <main id="deck" aria-live="polite"></main>
+
+    <div id="chrome">
+      <div class="progresso" aria-hidden="true"><span></span></div>
+      <div class="contador" aria-label="slide atual"></div>
+      <div class="apresentador" hidden><span class="ap-rotulo">apresenta</span><span class="ap-nome"></span></div>
+      <div class="player" hidden>
+        <span class="pl-modo"></span>
+        <span class="pl-tempo">0:00</span>
+        <button class="pl-btn" type="button" aria-label="Tocar a música (K)"></button>
+      </div>
+      <div class="pl-yt" hidden></div>
+      <p class="dica">→ ou espaço avança · F tela cheia · N notas · K música</p>
+    </div>
+
+    <div id="wipe" aria-hidden="true"></div>
+    <div id="blackout" aria-hidden="true"></div>
+    <div id="erro" role="alert"></div>
+
+    <!-- Filtro do carimbo: tinta falhada e borda irregular -->
+    <svg width="0" height="0" style="position: absolute" aria-hidden="true" focusable="false">
+      <filter id="tinta-carimbo" x="-10%" y="-20%" width="120%" height="140%">
+        <feTurbulence type="fractalNoise" baseFrequency="0.85" numOctaves="3" seed="7" result="ruido" />
+        <feColorMatrix in="ruido" type="matrix" values="0 0 0 0 0  0 0 0 0 0  0 0 0 0 0  0 0 0 -6 4.1" result="falhas" />
+        <feComposite in="SourceGraphic" in2="falhas" operator="in" result="tinta" />
+        <feTurbulence type="turbulence" baseFrequency="0.035" numOctaves="1" seed="3" result="onda" />
+        <feDisplacementMap in="tinta" in2="onda" scale="3" xChannelSelector="R" yChannelSelector="G" />
+      </filter>
+    </svg>
+
+    <noscript>
+      <p style="padding: 2em; font-size: 20px">Esta apresentação precisa de JavaScript ligado.</p>
+    </noscript>
+
+    <script type="module" src="js/main.js"></script>
+  </body>
+</html>

@@ -1,0 +1,29 @@
+{
+  "_leia": "Configurações gerais. É JSON: use aspas duplas e não deixe vírgula sobrando no fim de listas.",
+
+  "audio": {
+    "arquivo": "assets/audio/hoje-e-dia-de-el-rey.mp3",
+    "_arquivo": "Coloque aqui a faixa original do LP (6:55). Se o arquivo não existir, o site usa o YouTube abaixo (precisa de internet).",
+
+    "youtubeId": "GnHn2RYB2Cg",
+    "_youtubeId": "TODO VERIFICAR: upload de fã com a faixa completa (6:56). Alternativas oficiais (Universal): EqeJdVbS2Vc = versão de streaming, só 2:29; 3h6UKLgGBHw = ao vivo 1974 (7:41).",
+
+    "volume": 1
+  },
+
+  "sobreviventes": {
+    "palavras": ["Filho meu", "Meu filho"],
+    "_palavras": "As duas palavras que a censura deixou passar (Coan, 2020, p. 138). Ficam sem tarja.",
+    "tempos": [57, 124, 189],
+    "_tempos": "Segundos em que 'filho meu' é cantado na gravação de 1973: 0:57, 2:04 e 3:09 (Holmes, 2017, p. 183). Nesses momentos as palavras acendem na tela."
+  },
+
+  "voz": {
+    "_leia": "Ajustes finos da serra desenhada pela voz. Normalmente não precisa mexer.",
+    "freqMin": 90,
+    "freqMax": 5200,
+    "bandas": 46,
+    "camadas": 9,
+    "intervaloCamadaMs": 820
+  }
+}

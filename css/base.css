@@ -1,0 +1,593 @@
+/* ==========================================================================
+   Base: tokens, palco 16:9, elementos fixos (progresso, apresentador, player),
+   tarjas e transições. As composições de cada slide estão em slides.css.
+   ========================================================================== */
+
+:root {
+  /* Paleta: preto-tarja domina; vermelho-carimbo só em vetos e datas-chave;
+     óxido de ferro só na voz (a serra). */
+  --tinta: #0f0e0c;
+  --tinta-2: #1c1a17;
+  --papel: #ebe4d6;
+  --papel-2: #ddd3c1;
+  --carimbo: #cf2e1d;
+  --carimbo-claro: #ff5a3c;
+  --ferro: #8e4f2c;
+  --ferro-claro: #d08a5a;
+
+  /* 1u = 1% da largura de um palco 16:9 que cabe na tela.
+     1366x768 → 13,66px · 1920x1080 → 19,2px */
+  --u: min(1vw, 1.7778vh);
+
+  --sans: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  --serif: "Newsreader", Georgia, serif;
+
+  --t-micro: calc(var(--u) * 1.08);
+  --t-small: calc(var(--u) * 1.32);
+  --t-body: calc(var(--u) * 1.62);
+  --t-lead: calc(var(--u) * 2.2);
+
+  --ease-tarja: cubic-bezier(0.65, 0, 0.2, 1);
+  --ease-saida: cubic-bezier(0.2, 0.7, 0.2, 1);
+}
+
+/* Os temas valem tanto para o <body> (elementos fixos) quanto para cada slide. */
+[data-tema="papel"] {
+  --bg: var(--papel);
+  --fg: var(--tinta);
+  --fg-2: #4f483f;
+  --fg-3: #6f675b;
+  --regra: rgba(15, 14, 12, 0.3);
+  --acento: var(--carimbo);
+  --marca: #11100e;
+}
+[data-tema="tarja"] {
+  --bg: var(--tinta);
+  --fg: var(--papel);
+  --fg-2: #bdb5a7;
+  --fg-3: #958d80;
+  --regra: rgba(235, 228, 214, 0.26);
+  --acento: var(--carimbo-claro);
+  --marca: #ebe4d6;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  margin: 0;
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  background: var(--bg, var(--papel));
+  color: var(--fg, var(--tinta));
+  font-family: var(--serif);
+  font-size: var(--t-body);
+  line-height: 1.4;
+  -webkit-font-smoothing: antialiased;
+  text-rendering: optimizeLegibility;
+  font-kerning: normal;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: pan-y;
+}
+
+body.carregando #deck,
+body.carregando #chrome {
+  visibility: hidden;
+}
+
+h1,
+h2,
+h3,
+p,
+ol,
+ul,
+dl,
+dd,
+figure,
+blockquote {
+  margin: 0;
+  padding: 0;
+}
+ol,
+ul {
+  list-style: none;
+}
+button {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: 0;
+  padding: 0;
+  cursor: pointer;
+}
+a {
+  color: inherit;
+}
+em {
+  font-style: italic;
+}
+strong {
+  font-weight: 650;
+}
+:focus-visible {
+  outline: 2px solid var(--acento);
+  outline-offset: 3px;
+}
+
+/* --------------------------------------------------------------------------
+   Camadas: voz (canvas) atrás, slides no meio, controles na frente.
+   -------------------------------------------------------------------------- */
+
+#voz {
+  position: fixed;
+  inset: 0;
+  width: 100vw;
+  height: 100vh;
+  z-index: 1;
+  pointer-events: none;
+}
+
+#deck {
+  position: fixed;
+  inset: 0;
+  z-index: 2;
+}
+
+.slide {
+  position: absolute;
+  inset: 0;
+  visibility: hidden;
+  display: grid;
+  place-items: center;
+  overflow: hidden;
+}
+.slide.is-active {
+  visibility: visible;
+}
+
+/* O palco: composição desenhada em 100u x 56,25u. */
+.stage {
+  position: relative;
+  width: calc(var(--u) * 100);
+  height: calc(var(--u) * 56.25);
+}
+
+/* --------------------------------------------------------------------------
+   Tipografia comum
+   -------------------------------------------------------------------------- */
+
+.kicker {
+  position: absolute;
+  left: calc(var(--u) * 6);
+  top: calc(var(--u) * 3.6);
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: var(--t-small);
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+}
+
+.fontes {
+  position: absolute;
+  left: calc(var(--u) * 6);
+  right: calc(var(--u) * 24);
+  bottom: calc(var(--u) * 1.4);
+  font-family: var(--sans);
+  font-weight: 500;
+  font-size: var(--t-micro);
+  letter-spacing: 0.05em;
+  color: var(--fg-3);
+  line-height: 1.25;
+}
+.fontes b {
+  font-weight: 700;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  margin-right: 0.5em;
+}
+
+.cit-ref {
+  display: block;
+  margin-top: 0.7em;
+  font-family: var(--sans);
+  font-style: normal;
+  font-weight: 500;
+  font-size: var(--t-micro);
+  letter-spacing: 0.06em;
+  color: var(--fg-3);
+}
+.cit-ref .autor {
+  display: block;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--fg-2);
+}
+
+/* --------------------------------------------------------------------------
+   Tarjas (pincel atômico). Cada trecho censurado recebe um traço SVG único,
+   gerado em js/tarja.js. "Liberar" recolhe o traço da esquerda para a direita.
+   -------------------------------------------------------------------------- */
+
+.verso {
+  display: block;
+}
+
+.seg.tarjado {
+  color: transparent;
+  background-repeat: no-repeat;
+  background-position: right center;
+  background-size: 100% 100%;
+  -webkit-box-decoration-break: clone;
+  box-decoration-break: clone;
+  padding: 0.04em 0.14em;
+  margin: 0 -0.14em;
+  transition:
+    background-size 0.8s var(--ease-tarja),
+    color 0.4s ease 0.35s;
+}
+.seg.tarjado.liberado {
+  background-size: 0% 100%;
+  color: var(--fg);
+}
+
+/* As duas palavras que a censura deixou passar. */
+.seg.sobrevivente {
+  color: var(--fg);
+  text-decoration-line: underline;
+  text-decoration-color: transparent;
+  text-decoration-thickness: 0.07em;
+  text-underline-offset: 0.2em;
+  transition:
+    color 0.5s ease,
+    text-decoration-color 0.5s ease;
+}
+/* Quando "filho meu" soa na gravação (0:57, 2:04, 3:09), as palavras acendem. */
+body.filho-aceso .seg.sobrevivente,
+body.filho-aceso [data-sobrevivente] {
+  color: var(--acento);
+  text-decoration-color: var(--acento);
+}
+[data-sobrevivente] {
+  transition: color 0.6s ease;
+}
+
+/* --------------------------------------------------------------------------
+   Elementos fixos
+   -------------------------------------------------------------------------- */
+
+#chrome {
+  position: fixed;
+  inset: 0;
+  z-index: 5;
+  pointer-events: none;
+  font-family: var(--sans);
+  color: var(--fg-2);
+}
+#chrome > * {
+  pointer-events: auto;
+}
+
+.progresso {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  height: 3px;
+  pointer-events: none;
+}
+.progresso span {
+  display: block;
+  height: 100%;
+  width: 100%;
+  background: var(--fg);
+  opacity: 0.55;
+  transform-origin: left;
+  transform: scaleX(0);
+  transition: transform 0.5s var(--ease-saida);
+}
+
+.contador {
+  position: absolute;
+  right: calc(var(--u) * 2.4);
+  top: calc(var(--u) * 2.2);
+  font-size: var(--t-small);
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  font-variant-numeric: tabular-nums;
+  pointer-events: none;
+}
+.contador .de {
+  color: var(--fg-3);
+}
+
+/* Quem apresenta: discreto, ao lado do contador. */
+.apresentador {
+  position: absolute;
+  right: calc(var(--u) * 9.6);
+  top: calc(var(--u) * 2.2);
+  display: flex;
+  align-items: baseline;
+  gap: 0.6em;
+  font-size: var(--t-small);
+  pointer-events: none;
+}
+.apresentador .ap-rotulo {
+  font-weight: 500;
+  font-size: var(--t-micro);
+  letter-spacing: 0.18em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+.apresentador .ap-nome {
+  font-weight: 650;
+  letter-spacing: 0.06em;
+  color: var(--fg);
+}
+
+/* Mini-controle do áudio: sempre à mão, canto inferior direito. */
+.player {
+  position: absolute;
+  right: calc(var(--u) * 2.4);
+  bottom: calc(var(--u) * 1.1);
+  display: flex;
+  align-items: center;
+  gap: 0.75em;
+  font-size: var(--t-small);
+}
+.player[hidden] {
+  display: none;
+}
+/* O botão é um disquinho: sulcos, selo cor de ferro, e um reflexo que gira enquanto toca. */
+.pl-btn {
+  position: relative;
+  width: calc(var(--u) * 3.2);
+  height: calc(var(--u) * 3.2);
+  min-width: 36px;
+  min-height: 36px;
+  border-radius: 50%;
+  border: 1.5px solid var(--fg);
+  color: #f4ebde;
+  background:
+    radial-gradient(circle, var(--ferro) 0 30%, transparent 31%),
+    repeating-radial-gradient(circle, #121110 0 2px, #1d1b18 2px 3px);
+}
+.pl-btn::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  border-radius: 50%;
+  background: conic-gradient(from 20deg, transparent 0 10%, rgba(255, 255, 255, 0.22) 15%, transparent 21% 58%, rgba(255, 255, 255, 0.14) 63%, transparent 69%);
+}
+.pl-btn.tocando::after {
+  animation: girar 1.8s linear infinite;
+}
+@keyframes girar {
+  to {
+    transform: rotate(360deg);
+  }
+}
+.pl-btn::before {
+  content: "";
+  position: absolute;
+  z-index: 1;
+  inset: 0;
+  margin: auto;
+  width: 26%;
+  height: 30%;
+  background: currentColor;
+  clip-path: polygon(18% 0, 100% 50%, 18% 100%);
+}
+.pl-btn.tocando::before {
+  width: 24%;
+  height: 26%;
+  clip-path: none;
+  background: linear-gradient(90deg, currentColor 0 34%, transparent 34% 66%, currentColor 66% 100%);
+}
+.pl-tempo {
+  font-weight: 600;
+  letter-spacing: 0.08em;
+  font-variant-numeric: tabular-nums;
+  color: var(--fg-2);
+  min-width: 6.4em;
+}
+.pl-modo {
+  font-size: var(--t-micro);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+}
+/* Fallback do YouTube: o player precisa ficar visível para tocar. */
+.pl-yt {
+  position: fixed;
+  right: calc(var(--u) * 2.4);
+  bottom: calc(var(--u) * 4.6);
+  width: 176px;
+  height: 99px;
+  background: #000;
+  border: 1px solid var(--regra);
+  opacity: 0.45;
+  transition: opacity 0.3s ease;
+}
+.pl-yt:hover {
+  opacity: 1;
+}
+.pl-yt iframe {
+  width: 100%;
+  height: 100%;
+  border: 0;
+  display: block;
+}
+.pl-yt.recolhido {
+  opacity: 0.02;
+  pointer-events: none;
+}
+
+.dica {
+  position: absolute;
+  left: 50%;
+  bottom: calc(var(--u) * 1.5);
+  transform: translateX(-50%);
+  font-size: var(--t-micro);
+  font-weight: 500;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: var(--fg-3);
+  white-space: nowrap;
+  pointer-events: none;
+  transition: opacity 0.8s ease;
+}
+.dica.some {
+  opacity: 0;
+}
+
+/* Transição: uma tarja varre a tela. */
+#wipe {
+  position: fixed;
+  inset: 0;
+  z-index: 8;
+  background: var(--tinta);
+  transform: scaleX(0);
+  transform-origin: left center;
+  pointer-events: none;
+  will-change: transform;
+}
+
+#blackout {
+  position: fixed;
+  inset: 0;
+  z-index: 9;
+  background: #000;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.3s ease;
+}
+body.blackout #blackout {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+/* Tela de erro (JSON mal formatado, arquivo faltando...). */
+#erro {
+  position: fixed;
+  inset: 0;
+  z-index: 10;
+  display: none;
+  padding: 8vh 8vw;
+  background: var(--papel);
+  color: var(--tinta);
+  font-family: var(--serif);
+  font-size: 20px;
+  overflow: auto;
+}
+#erro.visivel {
+  display: block;
+}
+#erro h1 {
+  font-family: var(--sans);
+  font-size: 48px;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: var(--carimbo);
+  margin-bottom: 0.5em;
+}
+#erro pre {
+  white-space: pre-wrap;
+  font-family: ui-monospace, Consolas, monospace;
+  font-size: 15px;
+  background: var(--papel-2);
+  padding: 1em;
+}
+
+/* Modo prévia (iframes do modo apresentador): só o slide. */
+body.previa #chrome,
+body.previa #wipe {
+  display: none;
+}
+
+/* Telas em pé (celular): o palco vira coluna rolável. */
+@media (max-aspect-ratio: 4/5) {
+  :root {
+    --u: 2.5vw;
+  }
+  .slide {
+    display: block;
+    overflow-x: hidden;
+    overflow-y: auto;
+    -webkit-overflow-scrolling: touch;
+  }
+  .stage {
+    width: 100%;
+    height: auto;
+    min-height: 100%;
+    padding: calc(var(--u) * 14) 16px calc(var(--u) * 26);
+  }
+  .kicker,
+  .fontes {
+    position: static;
+  }
+  .fontes {
+    margin-top: 2em;
+  }
+  /* Faixas de fundo: o conteúdo rola por baixo dos controles. */
+  #chrome::before,
+  #chrome::after {
+    content: "";
+    position: absolute;
+    left: 0;
+    right: 0;
+    z-index: -1;
+    background: var(--bg);
+    pointer-events: none;
+  }
+  #chrome::before {
+    top: 0;
+    height: 46px;
+  }
+  #chrome::after {
+    bottom: 0;
+    height: 58px;
+    border-top: 1px solid var(--regra);
+  }
+  .contador {
+    top: 14px;
+    right: 16px;
+  }
+  .apresentador {
+    left: 16px;
+    right: auto;
+    top: 14px;
+  }
+  .player {
+    right: 16px;
+    bottom: 10px;
+  }
+  .pl-yt {
+    width: 128px;
+    height: 72px;
+    bottom: 66px;
+  }
+  .dica {
+    display: none;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .pl-btn.tocando::after {
+    animation: none;
+  }
+  .seg.tarjado,
+  .seg.sobrevivente,
+  [data-sobrevivente],
+  .progresso span {
+    transition: none;
+  }
+}

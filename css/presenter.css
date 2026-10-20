@@ -1,0 +1,227 @@
+/* Modo apresentador: legível de relance, sem distrações. */
+
+:root {
+  --tinta: #0f0e0c;
+  --tinta-2: #1c1a17;
+  --papel: #ebe4d6;
+  --cinza: #a39b8e;
+  --regra: rgba(235, 228, 214, 0.18);
+  --carimbo: #ff5a3c;
+  --sans: "Big Shoulders Display", "Arial Narrow", sans-serif;
+  --serif: "Newsreader", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+html,
+body {
+  margin: 0;
+  height: 100%;
+}
+body {
+  display: flex;
+  flex-direction: column;
+  background: var(--tinta);
+  color: var(--papel);
+  font-family: var(--serif);
+  font-size: 18px;
+  -webkit-font-smoothing: antialiased;
+}
+p,
+h2 {
+  margin: 0;
+}
+button {
+  font: 600 15px/1 var(--sans);
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--papel);
+  background: none;
+  border: 1.5px solid var(--regra);
+  padding: 0.75em 1.1em;
+  cursor: pointer;
+}
+button:hover {
+  border-color: var(--papel);
+}
+button.principal {
+  border-color: var(--papel);
+}
+
+.topo {
+  display: flex;
+  align-items: baseline;
+  gap: 24px;
+  padding: 12px 20px;
+  border-bottom: 1px solid var(--regra);
+  font-family: var(--sans);
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+.marca {
+  font-weight: 700;
+  font-size: 16px;
+}
+.conexao {
+  flex: 1;
+  font-size: 13px;
+  color: var(--cinza);
+}
+.conexao.ok {
+  color: var(--papel);
+}
+.relogio {
+  font-size: 20px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.painel {
+  flex: 1;
+  min-height: 0;
+  display: grid;
+  grid-template-columns: 1.45fr 1fr;
+  gap: 24px;
+  padding: 16px 20px 20px;
+}
+.col-atual,
+.col-lado {
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.rotulo {
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 20px;
+  letter-spacing: 0.06em;
+}
+.etiqueta {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cinza);
+}
+.passo {
+  margin-left: auto;
+  font-size: 15px;
+  color: var(--carimbo);
+  font-variant-numeric: tabular-nums;
+}
+.quem {
+  font-family: var(--sans);
+  font-size: 15px;
+  letter-spacing: 0.08em;
+  color: var(--cinza);
+  min-height: 1.2em;
+}
+.quem b {
+  color: var(--papel);
+  font-weight: 650;
+}
+.quem .troca {
+  color: var(--carimbo);
+}
+
+/* Prévias: iframes de 1600x900 reduzidos para caber. */
+.tela {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+  background: #000;
+  border: 1px solid var(--regra);
+}
+.tela iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 1600px;
+  height: 900px;
+  border: 0;
+  transform-origin: 0 0;
+  pointer-events: none;
+}
+
+.notas {
+  flex: 1;
+  min-height: 0;
+  display: flex;
+  flex-direction: column;
+  margin-top: 8px;
+  border-top: 1px solid var(--regra);
+  padding-top: 10px;
+}
+.notas h2 {
+  font-family: var(--sans);
+  font-weight: 600;
+  font-size: 12px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--cinza);
+  margin-bottom: 8px;
+}
+.notas-texto {
+  flex: 1;
+  overflow: auto;
+  font-size: 23px;
+  line-height: 1.45;
+  max-width: 62ch;
+}
+.notas-texto p + p {
+  margin-top: 0.6em;
+}
+
+.bloco {
+  border-top: 1px solid var(--regra);
+  padding-top: 10px;
+  margin-top: 6px;
+}
+.crono {
+  font-family: var(--sans);
+  font-weight: 700;
+  font-size: 64px;
+  line-height: 1;
+  font-variant-numeric: tabular-nums;
+  margin: 4px 0 8px;
+}
+.botoes,
+.nav {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.au-linha {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-top: 6px;
+  font-family: var(--sans);
+  font-size: 18px;
+  font-variant-numeric: tabular-nums;
+}
+.au-modo {
+  font-size: 12px;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--cinza);
+}
+.atalhos {
+  margin-top: auto;
+  font-size: 13px;
+  color: var(--cinza);
+}
+
+@media (max-width: 900px) {
+  .painel {
+    grid-template-columns: 1fr;
+    overflow: auto;
+  }
+}

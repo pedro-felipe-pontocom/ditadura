@@ -1,0 +1,115 @@
+{
+  "_leia": [
+    "Cada trecho vira um slide de análise.",
+    "estrofes: quais estrofes de content/letra.md aparecem no slide (contando a partir de 1).",
+    "inicio: segundo da música para o botão 'ouvir este trecho' (null = sem botão).",
+    "No texto, *asteriscos* viram itálico e **dois asteriscos** viram destaque.",
+    "Minutagem das partes: ficha técnica da reedição em CD de 2012, segundo Silva e Teixeira (2023)."
+  ],
+  "trechos": [
+    {
+      "id": "analise-1",
+      "parte": "1ª parte",
+      "tempo": "0:00 – 0:57",
+      "inicio": 0,
+      "estrofes": [
+        1
+      ],
+      "titulo": "O filho acusa El-Rey",
+      "texto": [
+        "Quem fala é o filho. Ele lista o que ficou impossível: o noivo não pode ser feliz, o justo não pode sobreviver.",
+        "El-Rey é “amo e senhor e dono da lei”. Para Coan (2020), é o general-presidente. Tambores e clarins são a pompa oficial que anuncia “o dia do ódio e o dia do não”.",
+        "Na gravação, o sax de Paulo Moura imita um clarim marcial (Silva e Teixeira, 2023)."
+      ],
+      "fontes": [
+        "coan2020",
+        "silva2023"
+      ],
+      "notas": "“Agora vamos fazer o que a censura não deixou: ler a letra. A música é um diálogo entre um filho e um pai. Cada toque libera um verso.”\n**[AÇÃO]** Libere os versos um por um e leia cada um em voz alta.\n“Quem fala aqui é o filho. Ele diz que nada mais é possível: o noivo não pode ser feliz, o justo não pode sobreviver. E aparece El-Rey, ‘amo e senhor e dono da lei’. Para o pesquisador Emerson Coan, é o general-presidente. Os tambores e clarins são a pompa oficial.”\n**[AÇÃO]** Se der tempo, clique em ‘ouvir este trecho’: o saxofone imita um clarim.\n“A Maria Eduarda continua.”"
+    },
+    {
+      "id": "analise-2",
+      "parte": "2ª parte",
+      "tempo": "0:57 – 2:04",
+      "inicio": 57,
+      "estrofes": [
+        2,
+        3
+      ],
+      "titulo": "“Filho meu”: o que passou",
+      "texto": [
+        "O pai responde ao ódio do filho pedindo amor. As palavras que abrem a fala dele, “Filho meu”, foram as únicas que a censura não riscou. Sirlan as canta aos 0:57 (Holmes, 2017).",
+        "O filho rebate com o retrato da repressão: as mentiras oficiais e os soldados na rua.",
+        "Para Coan (2020), o conflito de gerações também opõe quem apoiou ou se conformou com o golpe de 1964 e quem se opôs a ele."
+      ],
+      "fontes": [
+        "holmes2017",
+        "coan2020"
+      ],
+      "notas": "“Aqui entra o pai. Reparem que ‘Filho meu’ já está sem tarja: são as duas palavras que a censura deixou.”\n**[AÇÃO]** Libere e leia os versos.\n“O pai pede amor no lugar do ódio. O filho responde falando das mentiras oficiais e dos soldados na rua.”\n“Para o Coan, não é só briga de gerações: é o conflito entre quem apoiou ou aceitou o golpe de 1964 e quem foi contra.”\n**[AÇÃO]** Clique em ‘ouvir este trecho · 0:57’. Na gravação, quem faz o pai é o Sirlan, e as palavras acendem na tela quando ele canta ‘filho meu’."
+    },
+    {
+      "id": "analise-3",
+      "parte": "3ª parte",
+      "tempo": "2:04 – 3:07",
+      "inicio": 124,
+      "estrofes": [
+        4,
+        5,
+        6
+      ],
+      "titulo": "A poesia morta e o rei que vem calar",
+      "texto": [
+        "O filho diz que só poderia cantar se as armas fossem embora. A canção fala da própria censura.",
+        "No coro, a letra vetada dizia “El-Rey virá **calar**”. Na versão publicada no encarte da reedição de 2012, a palavra é “salvar” (Coan, 2020; Silva e Teixeira, 2023).",
+        "*Leitura do grupo:* calar foi exatamente o que aconteceu com esta canção."
+      ],
+      "fontes": [
+        "coan2020",
+        "silva2023"
+      ],
+      "notas": "É o centro da análise. Vá devagar.\n**[AÇÃO]** Libere e leia os versos.\n“O filho diz que só poderia cantar se as armas fossem embora. A música está falando da própria censura.”\n**[AÇÃO]** Libere o último verso bem devagar e deixe a sala ler.\n“Na letra que foi para a censura, o coro dizia: ‘El-Rey virá calar’. Na versão publicada no encarte da reedição de 2012, a palavra é ‘salvar’. A nossa leitura: calar foi exatamente o que aconteceu com esta canção.”"
+    },
+    {
+      "id": "analise-4",
+      "parte": "4ª parte",
+      "tempo": "3:07 –",
+      "inicio": 187,
+      "estrofes": [
+        7,
+        8
+      ],
+      "titulo": "“O mundo é pra frente que anda”",
+      "texto": [
+        "O pai cede em parte: o filho tem razão, “mas acho que não é em tudo”. O filho insiste: podem matar o amor, outro vai surgir.",
+        "*Leitura do grupo:* o verso ecoa, com ironia, o slogan oficial “Este é um país que vai pra frente” (citado por Coan, 2020). E o verso seguinte desmente a propaganda: “mas tudo está como está”.",
+        "O “Meu filho” que abre esta parte é cantado aos 3:09 (Holmes, 2017)."
+      ],
+      "fontes": [
+        "coan2020",
+        "holmes2017"
+      ],
+      "notas": "**[AÇÃO]** Libere e leia os versos.\n“O pai concorda em parte: o filho tem razão, ‘mas acho que não é em tudo’. O filho insiste: podem matar o amor, mas outro vai surgir.”\n“Aqui tem uma ironia, e essa é uma leitura do nosso grupo: ‘o mundo é pra frente que anda’ lembra o slogan do governo, ‘Este é um país que vai pra frente’. Só que o verso seguinte desmente: ‘mas tudo está como está’.”\n“Na gravação, aos 3:09, ouve-se ‘meu filho’ pela última vez.”"
+    },
+    {
+      "id": "analise-5",
+      "parte": "4ª parte · final",
+      "tempo": "– 6:55",
+      "inicio": null,
+      "estrofes": [
+        9
+      ],
+      "titulo": "Pai e filho cantam juntos",
+      "texto": [
+        "No fim, os dois concordam: largar o “dono” e procurar nova alegria para amanhã. O conflito vira acordo.",
+        "A música acompanha a virada. Entram coro e cordas, e o sax de Nivaldo Ornelas assume as vocalizações de pai e filho (Silva e Teixeira, 2023).",
+        "Sem a letra, a esperança chega pela voz. Milton tinha prometido: “Vou botar no som tudo o que eles tiraram na letra” (Borges, 1996, citado por Coan, 2020)."
+      ],
+      "fontes": [
+        "silva2023",
+        "coan2020"
+      ],
+      "notas": "**[AÇÃO]** Libere e leia os versos. Se der, deixe tocar o final da faixa enquanto lê.\n“No final, pai e filho cantam juntos e concordam: largar o ‘dono’ e procurar uma nova alegria para amanhã.”\n“A música muda junto: entram coro, cordas e o saxofone do Nivaldo Ornelas, que faz o papel das vozes.”\n“Sem letra, foi a voz que entregou a esperança. Era o que o Milton tinha prometido: botar no som tudo o que tiraram da letra. O Leandro vai mostrar o que aconteceu depois.”\nTODO: depois de ouvir o mp3, preencham 'inicio' deste trecho em content/analise.json com o segundo em que começa o coro final."
+    }
+  ]
+}

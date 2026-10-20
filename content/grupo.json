@@ -1,0 +1,32 @@
+{
+  "_leia": "1) Nomes em 'integrantes'. 2) Em 'divisao', quem apresenta cada slide (use a chave: pedro, leandro...). 'todos' vale para o grupo inteiro.",
+
+  "integrantes": {
+    "pedro": "Pedro",
+    "leandro": "Leandro",
+    "matheus": "Matheus",
+    "luis": "Luis Miguel",
+    "maria": "Maria Eduarda"
+  },
+
+  "divisao": {
+    "abertura": "pedro",
+    "tese": "pedro",
+    "contexto": "leandro",
+    "linha-do-tempo": "leandro",
+    "milton": "matheus",
+    "parceiros": "matheus",
+    "disco": "matheus",
+    "censor": "luis",
+    "parecer": "luis",
+    "analise-1": "luis",
+    "analise-2": "maria",
+    "analise-3": "maria",
+    "analise-4": "maria",
+    "analise-5": "maria",
+    "ao-vivo": "leandro",
+    "fechamento": "pedro",
+    "silencio": "pedro",
+    "referencias": "todos"
+  }
+}

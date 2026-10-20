@@ -1,0 +1,365 @@
+{
+  "_leia": [
+    "Roteiro da apresentação, na ordem. Todo texto visível está aqui.",
+    "tema: 'papel' (fundo claro) ou 'tarja' (fundo escuro).",
+    "notas: a fala de quem apresenta. Aparecem só no modo apresentador (tecla N). Cada \\n vira um parágrafo.",
+    "fontes: chaves de content/fontes.json, mostradas no rodapé do slide.",
+    "O item {\"tipo\": \"analise\"} vira um slide para cada trecho de content/analise.json.",
+    "Nos textos, *asteriscos* viram itálico e **dois asteriscos** viram destaque."
+  ],
+
+  "slides": [
+    {
+      "id": "abertura",
+      "tipo": "abertura",
+      "tema": "papel",
+      "titulo": "Hoje é Dia de El-Rey",
+      "autores": "Milton Nascimento · Márcio Borges",
+      "disco": "Milagre dos Peixes · EMI-Odeon · 1973",
+      "rotulo": "Ditadura civil-militar · 1964–1985",
+      "capa": { "autor": "Milton Nascimento", "titulo": "Milagre dos Peixes", "ano": "EMI-Odeon · 1973" },
+      "chamada": "clique no disco para ouvir",
+      "chamadaTocando": "lado B · faixa 3 · 33⅓ rpm",
+      "legenda": "A letra como a censura devolveu: toda riscada, menos duas palavras.",
+      "fontes": ["coan2020", "wikiDisco"],
+      "notas": "**[AÇÃO]** O slide já está na tela quando a turma se acomoda. Ninguém fala. Clique no disco: ele sai da capa, vai para a vitrola, o braço desce, a agulha estala e a música começa. Deixe tocar uns 20 segundos.\n“Isso que vocês estão ouvindo é ‘Hoje é Dia de El-Rey’, do Milton Nascimento, gravada em 1973. Reparem: ele não canta nenhuma palavra.”\n“Olhem a linha cor de ferro no pé da tela: essa serra está sendo desenhada agora, pela voz dele. E do lado direito está a letra do jeito que ela voltou da censura: toda riscada.”\n“Nosso trabalho é sobre essa música e sobre a Ditadura Civil-Militar: como a censura tentou calar uma canção, e como ela gritou mesmo assim. Eu sou o Pedro, e apresento com o Leandro, o Matheus, o Luis Miguel e a Maria Eduarda.”\n**[AÇÃO]** Clique no disco de novo: o braço levanta e a música para. Avance."
+    },
+    {
+      "id": "tese",
+      "tipo": "tese",
+      "tema": "tarja",
+      "linhas": ["Em 1973, a censura riscou a letra inteira.", "Sobraram duas palavras."],
+      "destaque": "Filho meu.",
+      "destaqueInicio": 55,
+      "destaqueDica": "clique em *Filho meu.* para ouvir as duas palavras · 0:57",
+      "citacao": {
+        "texto": "Eu me lembro que os censores devolveram a letra toda rabiscada com pincel atômico. Sobraram apenas duas palavras, que eles não rabiscaram. Aí nós cantamos essas duas palavras.",
+        "autor": "Márcio Borges, autor da letra",
+        "ref": "em Mattos (2006, p. 145), citado por Coan (2020)"
+      },
+      "fontes": ["coan2020", "holmes2017"],
+      "notas": "“Em 1973, a censura riscou a letra inteira desta música. Sobraram só duas palavras: ‘Filho meu’.”\n“Quem conta isso é o próprio autor da letra, o Márcio Borges.” (Leia a citação do canto direito.)\n**[AÇÃO]** Clique em “Filho meu.”: a música pula para 0:55. Aos 0:57 o cantor diz “filho meu” e as palavras acendem em vermelho. Espere acontecer.\n“Foram essas as duas palavras que passaram. A gente vai mostrar por que a letra foi proibida e como o Milton respondeu: gravando a música só com a voz.”\n**[AÇÃO]** Aperte K para pausar. “Para entender isso, o Leandro vai explicar o contexto.”"
+    },
+    {
+      "id": "contexto",
+      "tipo": "contexto",
+      "tema": "papel",
+      "kicker": "Contexto",
+      "sigla": "AI-5",
+      "data": "13 de dezembro de 1968",
+      "lead": "O ato que abriu os “anos de chumbo”.",
+      "blocos": [
+        {
+          "titulo": "O ato",
+          "texto": "Deu ao presidente poder para fechar o Congresso, cassar mandatos, suspender direitos políticos e suspender o habeas corpus em crimes políticos. Vigorou até 1978."
+        },
+        {
+          "titulo": "Anos de chumbo",
+          "texto": "De 1969 a 1974, no governo do general Emílio Garrastazu Médici, a perseguição aos opositores chegou a um dos pontos mais duros do regime."
+        },
+        {
+          "titulo": "Censura prévia",
+          "texto": "O Decreto-Lei 1.077, de 26 de janeiro de 1970, mandou a Polícia Federal examinar livros e revistas **antes** da publicação."
+        },
+        {
+          "titulo": "Na música",
+          "texto": "Toda letra passava pelo Serviço de Censura de Diversões Públicas da Polícia Federal antes de ser gravada. Os pareceres feitos no Rio podiam ser revistos em Brasília."
+        }
+      ],
+      "citacao": {
+        "texto": "o emprêgo dêsses meios de comunicação obedece a um plano subversivo, que põe em risco a segurança nacional.",
+        "ref": "Decreto-Lei 1.077/1970, na justificativa (grafia original)"
+      },
+      "fontes": ["ai5", "coan2020", "silva2023", "dl1077", "holmes2017"],
+      "notas": "“Em 13 de dezembro de 1968, o governo militar baixou o AI-5, o Ato Institucional número 5. Com ele, o presidente podia fechar o Congresso, cassar mandatos, suspender direitos políticos e suspender o habeas corpus em crimes políticos. Na prática, uma pessoa podia ser presa sem conseguir recorrer à Justiça.”\n“Começaram os chamados anos de chumbo, de 1969 a 1974, no governo do general Médici: um dos períodos mais duros de perseguição a quem era contra o regime.”\n“A censura virou rotina. Em 1970, o Decreto-Lei 1.077 mandou a Polícia Federal examinar livros e revistas antes de serem publicados. Olhem a justificativa do próprio decreto (aponte a citação com a barra vermelha): tudo isso seria parte de um ‘plano subversivo’.”\n“E na música era igual: toda letra tinha de passar pelo Serviço de Censura de Diversões Públicas, da Polícia Federal, antes de ser gravada.”"
+    },
+    {
+      "id": "linha-do-tempo",
+      "tipo": "linha",
+      "tema": "tarja",
+      "kicker": "1964 → 1985",
+      "resumo": "Vinte e um anos de regime militar.",
+      "inicio": 1964,
+      "fim": 1985,
+      "faixas": [
+        { "de": 1969, "ate": 1974, "rotulo": "anos de chumbo e “milagre econômico”" }
+      ],
+      "marcos": [
+        {
+          "ano": 1964,
+          "titulo": "Golpe",
+          "texto": "Um golpe civil-militar derruba o presidente João Goulart.",
+          "fontes": ["holmes2017"]
+        },
+        {
+          "ano": 1968,
+          "destaque": true,
+          "titulo": "AI-5",
+          "texto": "13 de dezembro: o Congresso pode ser fechado e o habeas corpus é suspenso para crimes políticos.",
+          "fontes": ["ai5"]
+        },
+        {
+          "ano": 1970,
+          "titulo": "Censura prévia",
+          "texto": "Decreto-Lei 1.077: a Polícia Federal passa a examinar livros e revistas antes de circularem.",
+          "fontes": ["dl1077"]
+        },
+        {
+          "ano": 1973,
+          "destaque": true,
+          "titulo": "Milagre dos Peixes",
+          "texto": "Três letras do disco são vetadas. Milton grava assim mesmo, só com a voz.",
+          "fontes": ["coan2020", "holmes2017"]
+        },
+        {
+          "ano": 1974,
+          "titulo": "Ao vivo",
+          "texto": "Milagre dos Peixes ao Vivo, no Theatro Municipal de São Paulo. “Hoje é Dia de El-Rey” continua sem letra.",
+          "fontes": ["holmes2017"]
+        },
+        {
+          "ano": 1978.8,
+          "rotulo": "1978–79",
+          "titulo": "Abertura",
+          "texto": "A Emenda nº 11 revoga os atos institucionais a partir de 1º de janeiro de 1979. Em 28 de agosto de 1979, a Lei da Anistia.",
+          "fontes": ["ec11", "lei6683"]
+        },
+        {
+          "ano": 1985,
+          "rotulo": "1984–85",
+          "titulo": "Fim do regime",
+          "texto": "Nas Diretas Já, “Coração de Estudante” (Wagner Tiso e Milton) vira hino. Em 15 de março de 1985, José Sarney toma posse: o primeiro presidente civil depois do regime militar.",
+          "fontes": ["holmes2017", "senado2015"]
+        }
+      ],
+      "fontes": ["holmes2017", "ai5", "dl1077", "ec11", "lei6683", "senado2015"],
+      "notas": "“Essa é a linha do tempo da ditadura: 21 anos.” **[AÇÃO]** Cada seta acende um marco. Também dá para clicar direto num ano.\n**1964:** “Começa com o golpe civil-militar que derrubou o presidente João Goulart.”\n**1968:** “O AI-5, que acabamos de ver.”\n**1970:** “A censura prévia de livros e revistas.”\n**1973:** “O ano do nosso disco: três letras vetadas, e o Milton grava assim mesmo.” Mostre a faixa listrada: “de 1969 a 1974 são os anos de chumbo e também os anos da propaganda do ‘milagre econômico’. Repressão e propaganda ao mesmo tempo.”\n**1974:** “Sai o disco ao vivo, que a gente mostra no final.”\n**1978–79:** “Os atos institucionais são revogados a partir de 1979, e em agosto de 1979 vem a Lei da Anistia.”\n**1984–85:** “Nas Diretas Já, uma música do Milton com o Wagner Tiso, ‘Coração de Estudante’, vira hino. Em 15 de março de 1985, José Sarney toma posse: o primeiro presidente civil depois do regime.”\n“Agora o Matheus vai contar quem é o Milton Nascimento.”"
+    },
+    {
+      "id": "milton",
+      "tipo": "bio",
+      "tema": "papel",
+      "_todo": "TODO VERIFICAR: os nomes da mãe e dos pais adotivos vêm da Wikipédia, que não dá fonte para o parágrafo da adoção. Confirmar na Enciclopédia Itaú Cultural ou em Duarte (2009), 'Travessia: a vida de Milton Nascimento'.",
+      "kicker": "Biografia",
+      "nome": ["Milton", "Nascimento"],
+      "subtitulo": "Nascido no Rio de Janeiro, criado em Três Pontas, Minas Gerais.",
+      "eventos": [
+        { "ano": "1942", "texto": "Nasce em 26 de outubro, no Rio de Janeiro. A mãe, Maria do Carmo do Nascimento, empregada doméstica, morre antes de ele completar dois anos." },
+        { "ano": "Infância", "texto": "Adotado por Lília Silva Campos, professora de música, e Josino Campos, cresce em Três Pontas (MG). O apelido de infância fica para sempre: **Bituca**." },
+        { "ano": "1967", "texto": "“Travessia”, com letra de Fernando Brant, fica em 2º lugar no II Festival Internacional da Canção." },
+        { "ano": "1972", "texto": "Lança com Lô Borges o disco duplo *Clube da Esquina*, que dá nome ao coletivo de músicos mineiros." },
+        { "ano": "1973", "texto": "*Milagre dos Peixes*: a censura corta as letras, e a voz vira o instrumento principal." },
+        { "ano": "2022", "texto": "Despede-se dos palcos no Mineirão, em Belo Horizonte, em 13 de novembro." }
+      ],
+      "fontes": ["wikiMilton", "wikiBrant", "holmes2017", "agbr2025"],
+      "notas": "“Milton Nascimento nasceu no Rio de Janeiro em 26 de outubro de 1942. A mãe dele, Maria do Carmo, era empregada doméstica e morreu antes de ele fazer dois anos.”\n“Ele foi adotado por Lília e Josino Campos e cresceu em Três Pontas, no interior de Minas Gerais. Por isso a música dele é tão mineira. Ganhou ainda criança o apelido que tem até hoje: Bituca.”\n“Em 1967, ‘Travessia’ ficou em segundo lugar no Festival Internacional da Canção e ele ficou conhecido no Brasil. Em 1972 lançou com o Lô Borges o disco ‘Clube da Esquina’, que deu nome a todo um grupo de músicos de Minas.”\n“Quando a censura veio, em 1973, ele já era famoso, e isso ajudou o disco a sair mesmo censurado. Em 2022 ele se despediu dos palcos, num show no Mineirão.”"
+    },
+    {
+      "id": "parceiros",
+      "tipo": "parceiros",
+      "tema": "tarja",
+      "kicker": "Os parceiros",
+      "titulo": "Quem escreveu o que foi riscado",
+      "pessoas": [
+        {
+          "nome": "Márcio Borges",
+          "datas": "Belo Horizonte, 1946",
+          "papel": "letra de “Hoje é Dia de El-Rey”",
+          "texto": "Letrista do Clube da Esquina e irmão de Lô Borges. Contou a história do grupo no livro *Os sonhos não envelhecem* (1996).",
+          "citacao": "Nossa suíte falava dos conflitos entre duas mentalidades, duas gerações, pai e filho dialogando num clima de alegorias pesadas e atmosfera musical densa e expressionista."
+        },
+        {
+          "nome": "Fernando Brant",
+          "datas": "Caldas (MG), 1946 – Belo Horizonte, 2015",
+          "papel": "letra de “Os escravos de Jó”",
+          "texto": "Parceiro de Milton desde “Travessia”. Da letra vetada, a censura liberou uma única quadra, cantada por Clementina de Jesus."
+        },
+        {
+          "nome": "Ruy Guerra",
+          "datas": "cineasta de *Os Deuses e os Mortos* (1970)",
+          "papel": "letra de “Cadê”",
+          "texto": "Vetada por inteiro. O censor anotou: “Ironia política. Contestação”."
+        }
+      ],
+      "vozes": [
+        { "nome": "Dorival Caymmi", "texto": "Faria a voz do pai. Com a letra vetada, o dueto com Milton não aconteceu." },
+        { "nome": "Sirlan", "texto": "Cantou o pai na gravação. O disco dele, *Profissão de Fé* (1972), foi todo censurado e só saiu em 1979." },
+        { "nome": "Lô Borges", "texto": "Cofundador do Clube da Esquina, parceiro de Milton em “Nada Será Como Antes”. Morreu em 2 de novembro de 2025, aos 73 anos." }
+      ],
+      "fontes": ["wikiMarcio", "holmes2017", "wikiBrant", "coan2020", "herdy2015", "silva2023", "agbr2025"],
+      "notas": "“A censura não apagou só palavras: apagou autores. As três letras vetadas no disco eram de três letristas diferentes.”\n“A de ‘Hoje é Dia de El-Rey’ é do Márcio Borges, irmão do Lô e letrista do Clube da Esquina. Ele mesmo descreveu a música assim:” (Leia a citação.)\n“O Fernando Brant, parceiro do Milton desde ‘Travessia’, teve ‘Os escravos de Jó’ vetada: só uma quadra passou. E o cineasta Ruy Guerra teve ‘Cadê’ vetada por inteiro.”\n(Aponte a faixa de baixo.) “O pai da música ia ser cantado pelo Dorival Caymmi, mas com a letra vetada o dueto não aconteceu. Quem cantou foi o Sirlan, que também teve um disco inteiro censurado. E o Lô Borges, que fundou o Clube da Esquina com o Milton, morreu no ano passado, em 2025.”"
+    },
+    {
+      "id": "disco",
+      "tipo": "disco",
+      "tema": "tarja",
+      "_todo": "A crítica dos censores ao som 'agressivo' da voz vem de Holmes (2017, p. 168), que não cita o documento da censura para esse ponto.",
+      "kicker": "O disco",
+      "titulo": "Milagre dos Peixes",
+      "ficha": "EMI-Odeon · 1973 · 1 LP e 1 compacto",
+      "numeros": [
+        { "valor": "11", "texto": "músicas" },
+        { "valor": "5", "texto": "já eram instrumentais" },
+        { "valor": "3", "texto": "letras vetadas", "destaque": true },
+        { "valor": "8", "texto": "sem palavras" }
+      ],
+      "texto": "Milton não pediu aos letristas os “retoques” comuns na época. Gravou sem palavras: vocalises, falsete, gritos, sussurros. Os censores chegaram a questionar o som “agressivo” da voz dele.",
+      "encarte": {
+        "titulo": "Hoje é Dia de El Rey",
+        "creditos": ["Milton Nascimento", "letra de Márcio Borges"],
+        "legenda": "Reconstrução. Nos encartes coloridos, o crédito “letra de” ficou e o espaço da letra, em branco. **Clique na folha** para ver as 11 faixas.",
+        "versoTitulo": "Milagre dos Peixes · as 11 faixas",
+        "faixas": [
+          { "lado": "Lado A", "titulo": "Os escravos de Jó", "status": "1 quadra liberada", "tipo": "vetada" },
+          { "lado": "Lado A", "titulo": "Carlos, Lúcia, Chico e Tiago", "status": "instrumental" },
+          { "lado": "Lado A", "titulo": "Milagre dos Peixes", "status": "letra liberada", "tipo": "liberada" },
+          { "lado": "Lado A", "titulo": "A chamada", "status": "instrumental" },
+          { "lado": "Lado B", "titulo": "Pablo nº 2", "status": "instrumental" },
+          { "lado": "Lado B", "titulo": "Tema dos deuses", "status": "instrumental" },
+          { "lado": "Lado B", "titulo": "Hoje é Dia de El Rey", "status": "vetada", "tipo": "vetada" },
+          { "lado": "Lado B", "titulo": "A última sessão de música", "status": "instrumental" },
+          { "lado": "Compacto", "titulo": "Cadê", "status": "vetada", "tipo": "vetada" },
+          { "lado": "Compacto", "titulo": "Sacramento", "status": "letra liberada", "tipo": "liberada" },
+          { "lado": "Compacto", "titulo": "Pablo", "status": "letra liberada", "tipo": "liberada" }
+        ]
+      },
+      "citacoes": [
+        { "texto": "Vou botar no som tudo o que eles tiraram na letra.", "autor": "Milton Nascimento", "ref": "Borges (1996), citado por Coan (2020)" },
+        { "texto": "Já que não vai ter letra mesmo, o negócio é carregar no canto, protestar, dar o recado através da voz.", "autor": "Fernando Brant", "ref": "Mattos (2006), citado por Coan (2020)" }
+      ],
+      "fontes": ["coan2020", "silva2023", "holmes2017", "wikiDisco"],
+      "notas": "“O disco se chama ‘Milagre dos Peixes’, de 1973. Façam a conta com a gente: 11 músicas. 5 já tinham sido pensadas sem letra. A censura vetou 3. Resultado: 8 músicas sem palavras.”\n“O Milton não aceitou mudar as letras para agradar a censura, como era comum na época. Gravou cantando sem palavras: vocalises, falsete, gritos, sussurros. Os censores chegaram a questionar o som ‘agressivo’ da voz dele.”\n“E tinha um protesto escondido no encarte.” (Aponte a folha laranja.) “Cada música tinha uma folha com a ficha técnica. Nas censuradas, o nome do letrista aparece, mas o espaço da letra ficou em branco.”\n**[AÇÃO]** Clique na folha: ela vira e mostra as 11 faixas, com o que aconteceu com cada uma.\n“O próprio Milton resumiu: ‘Vou botar no som tudo o que eles tiraram na letra.’ Agora o Luis Miguel vai colocar vocês no lugar dos censores.”"
+    },
+    {
+      "id": "censor",
+      "tipo": "censor",
+      "tema": "papel",
+      "kicker": "Agora vocês são a censura",
+      "titulo": "Liberar ou vetar?",
+      "instrucao": "Trechos de três letras do mesmo disco, enviadas à censura em 1973. A turma vota em cada uma; depois o carimbo mostra o que a censura decidiu.",
+      "cartas": [
+        {
+          "musica": "Os escravos de Jó",
+          "autores": "Milton Nascimento / Fernando Brant",
+          "trecho": "Dizem que está bom / Dizem que está bom / Difícil ver um troço pior / Mas dizem nós estar na melhor",
+          "decisao": "vetada",
+          "nota": "“Contestação política”, anotou o censor, que ainda viu pornografia no verso da “vaca Vitória”. Só uma quadra foi liberada, em 5 de maio de 1973."
+        },
+        {
+          "musica": "Cadê",
+          "autores": "Milton Nascimento / Ruy Guerra",
+          "trecho": "Cadê tuas botas de sete léguas? / E a Tilim de Peter Pan? / E tua esperança Branca de Neve? / Cadê, quem levou?",
+          "decisao": "vetada",
+          "nota": "Vetada por inteiro: “Ironia política. Contestação”."
+        },
+        {
+          "musica": "Milagre dos Peixes",
+          "autores": "Milton Nascimento / Fernando Brant",
+          "trecho": "Eles não falam do mar e dos peixes / Nem deixam ver a moça, pura canção / Nem ver nascer a flor / Nem ver nascer o sol",
+          "decisao": "liberada",
+          "nota": "Passou sem cortes. Foi uma das três letras do disco liberadas inteiras."
+        }
+      ],
+      "citacao": {
+        "texto": "Muitas vezes, a gente reprovava a música, mas se sentia como se estivesse se prostituindo, porque não concordava com aquilo. […] Quem aprovasse uma música que depois fosse reprovada em Brasília tinha de responder a processo interno.",
+        "autor": "Odette Martins Lanziotti, censora da Polícia Federal no Rio (não analisou este disco)",
+        "ref": "Nunes Leal (2005), citado por Holmes (2017)"
+      },
+      "fontes": ["coan2020", "holmes2017"],
+      "notas": "“Agora vocês são a censura. Aqui estão trechos de três letras do mesmo disco, enviadas para a censura em 1973. Em cada uma, a turma decide: liberar ou vetar?”\n**[AÇÃO]** Leia o trecho da linha 01 em voz alta e pergunte: “Levanta a mão quem libera… e quem veta?” Clique no botão que a maioria escolheu. O carimbo real cai. Repita nas linhas 02 e 03. (Com o passador, a seta também revela, só que sem voto.)\n**01, Os escravos de Jó:** “Vetada. O censor escreveu ‘contestação política’, e ainda viu pornografia num verso que falava da ‘vaca Vitória’.”\n**02, Cadê:** “Vetada inteira: ‘ironia política, contestação’.”\n**03, Milagre dos Peixes:** “Essa passou. Mesmo dizendo que ‘eles’ não deixam ver nem a flor nascer.”\n**[AÇÃO]** Próxima seta: aparece o depoimento de uma censora da época. “Uma censora do Rio, que não cuidou deste disco, contou anos depois:” (Leia.)\n“Ou seja: quem decidia seguia ordens e tinha medo de ser punido. Agora vamos ver o que fizeram com ‘Hoje é Dia de El-Rey’.”"
+    },
+    {
+      "id": "parecer",
+      "tipo": "parecer",
+      "tema": "papel",
+      "_todo": "TODO VERIFICAR: a data exata do veto de 'Hoje é dia de El-Rey' não aparece nas fontes consultadas; por isso o parecer não tem campo de data. O número do documento vem de Holmes (2017, fig. 5.5), que o grafa 'BN AN, RIO TN.CPR.LMU.19932' (provavelmente BR AN). Dá para conferir no SIAN do Arquivo Nacional.",
+      "kicker": "A censura",
+      "aviso": "Reconstrução gráfica, só com dados verificados. O documento original está no Arquivo Nacional.",
+      "orgao": "Serviço de Censura de Diversões Públicas · Polícia Federal",
+      "campos": [
+        { "rotulo": "Obra", "valor": "Hoje é dia de El-Rey" },
+        { "rotulo": "Música", "valor": "Milton Nascimento" },
+        { "rotulo": "Letra", "valor": "Márcio Borges" },
+        { "rotulo": "Destino", "valor": "LP Milagre dos Peixes · EMI-Odeon · 1973" },
+        { "rotulo": "Censora", "valor": "Marina de Almeida Brum Duarte" }
+      ],
+      "anotacao": "Conteúdo nitidamente político",
+      "carimbo": "Vetada",
+      "acervo": "Arquivo Nacional · TN.CPR.LMU.19932",
+      "lateral": [
+        { "titulo": "Motivo alegado", "texto": "Segundo Márcio Borges, a letra “incitava à subversão e à desobediência civil”." },
+        { "titulo": "O que se perdeu", "texto": "O dueto com Dorival Caymmi, que faria o pai." },
+        { "titulo": "Depois", "texto": "Por causa da letra, Milton foi “convidado” a depor no DOPS." },
+        { "titulo": "No mesmo disco", "texto": "“Os escravos de Jó” foi vetada em 4 de abril de 1973. Em 5 de maio, a censura liberou uma quadra, “não devendo ser gravada nem cantada o restante da letra”." }
+      ],
+      "fontes": ["herdy2015", "coan2020", "holmes2017", "silva2023"],
+      "notas": "“Esta é uma reconstrução do parecer da censura sobre ‘Hoje é Dia de El-Rey’. Os dados são reais; o desenho é nosso. O documento original está no Arquivo Nacional.”\n“A censora foi Marina de Almeida Brum Duarte, e a anotação dela foi: ‘Conteúdo nitidamente político’. Segundo o Márcio Borges, a acusação era de que a letra ‘incitava à subversão e à desobediência civil’.”\n**[AÇÃO]** Próxima seta: o carimbo VETADA cai.\n“Resultado: letra vetada, o dueto com o Dorival Caymmi perdido, e o Milton ‘convidado’ a depor no DOPS, a polícia política. A censura não ficava só no papel.”"
+    },
+    { "tipo": "analise" },
+    {
+      "id": "ao-vivo",
+      "tipo": "aovivo",
+      "tema": "tarja",
+      "kicker": "1974",
+      "titulo": "Milagre dos Peixes ao Vivo",
+      "lead": "Gravado no Theatro Municipal de São Paulo, em 7 e 8 de maio de 1974, com orquestra e o grupo Som Imaginário. Arranjos de Wagner Tiso, Paulo Moura e Radamés Gnattali.",
+      "pontos": [
+        "12 das 16 faixas têm letra. Mas as letras vetadas **não voltaram**: “Hoje é Dia de El-Rey” continua sem palavras, só com “Filho meu!”.",
+        "Entra “Bodas”, de Ruy Guerra, que a própria gravadora tinha barrado no disco de 1973.",
+        "Para a socióloga Sheyla Diniz, o disco foi “uma espécie de ‘acerto de contas’ para com o veto da EMI-Odeon e, sobretudo, para com a censura militar”."
+      ],
+      "citacao": {
+        "texto": "O Campus estava cercado de camburões do DOPS e tropas de choque. Mas lá dentro a multidão ululava, solta.",
+        "autor": "Márcio Borges, sobre o show para estudantes na USP",
+        "ref": "Borges (2011), citado por Holmes (2017)"
+      },
+      "rodape": "Em 1974, Milton foi ameaçado: se fosse a São Paulo ver o filho Pablo, o menino seria sequestrado.",
+      "fontes": ["holmes2017", "wikiDisco", "coan2020"],
+      "notas": "“Em maio de 1974, o Milton gravou o ‘Milagre dos Peixes ao Vivo’, no Theatro Municipal de São Paulo, com orquestra e o grupo Som Imaginário.”\n“Muita gente acha que esse disco trouxe as letras de volta. Não trouxe: ‘Hoje é Dia de El-Rey’ continuou sem palavras, só com ‘Filho meu!’. O que mudou foi o tamanho do protesto: entrou ‘Bodas’, que a própria gravadora tinha barrado, e a socióloga Sheyla Diniz chamou o disco de ‘acerto de contas’ com a censura.”\n“Num show para estudantes na USP, o Márcio Borges lembra:” (Leia a citação.)\n“E um detalhe pessoal: em 1974 o Milton foi ameaçado. Se fosse a São Paulo ver o filho, Pablo, o menino seria sequestrado. O ‘Filho meu’ da música ganha outro peso. O Pedro fecha o trabalho.”"
+    },
+    {
+      "id": "fechamento",
+      "tipo": "fechamento",
+      "tema": "tarja",
+      "_todo": "TODO VERIFICAR: o crescimento médio do PIB no 'milagre' (11,1% ao ano em 1968–1973, segundo Veloso, Villela e Giambiagi, Revista Brasileira de Economia, 2008) não foi confirmado na fonte primária; por isso não está no slide.",
+      "musicaAoDesligar": true,
+      "esquerda": {
+        "titulo": "Milagre econômico",
+        "texto": "A propaganda do regime, na TV colorida desde 1972. Crescimento para poucos, com arrocho salarial e exclusão social.",
+        "slogans": ["Este é um país que vai pra frente", "Brasil, ame-o ou deixe-o", "Ninguém segura este país", "Fazer o bolo crescer para depois dividir"],
+        "tvLegenda": "Slogans da propaganda oficial (Coan, 2020). Clique na TV para mudar de canal."
+      },
+      "direita": {
+        "titulo": "Milagre dos Peixes",
+        "texto": "O milagre da Bíblia é o da multiplicação, que já nasce dividida. Na capa do disco, a mão de Milton segura o filho Pablo, ainda bebê.",
+        "verso": "Eles não falam do mar e dos peixes / Nem deixam ver a moça, pura canção",
+        "versoRef": "“Milagre dos Peixes” (Milton Nascimento e Fernando Brant), uma das três letras que passaram"
+      },
+      "final": {
+        "valor": "434",
+        "texto": "mortos e desaparecidos políticos reconhecidos pela Comissão Nacional da Verdade, em 2014."
+      },
+      "fontes": ["coan2020", "holmes2017", "hrw2014"],
+      "notas": "“Para fechar, dois milagres.”\n“O do governo era o ‘milagre econômico’, vendido pela TV, que ficou colorida em 1972. Essa TV mostra os slogans da época.” **[AÇÃO]** Clique na TV para trocar de canal. “Brasil, ame-o ou deixe-o. Ninguém segura este país. Era crescimento para poucos, com arrocho salarial e exclusão.”\n**[AÇÃO]** Próxima seta: a TV desliga e a música volta a tocar sozinha.\n“O outro é o ‘Milagre dos Peixes’. O milagre da Bíblia é o da multiplicação, que já nasce dividida: o contrário de ‘fazer o bolo crescer para depois dividir’. Na capa do disco, a mão do Milton segura o filho dele, Pablo, ainda bebê. E uma das poucas letras que passaram diz:” (Leia o verso.)\n**[AÇÃO]** Próxima seta: aparece o número.\n“E o outro lado do milagre: a Comissão Nacional da Verdade reconheceu 434 mortos e desaparecidos políticos.” Faça uma pausa antes de avançar."
+    },
+    {
+      "id": "silencio",
+      "tipo": "silencio",
+      "tema": "tarja",
+      "texto": "Segundo Holmes (2017), a letra de “Hoje é Dia de El-Rey” nunca foi cantada nem gravada.",
+      "assinatura": "Hoje é Dia de El-Rey · Milton Nascimento e Márcio Borges · 1973",
+      "capa": { "autor": "Milton Nascimento", "titulo": "Milagre dos Peixes", "ano": "EMI-Odeon · 1973" },
+      "fadeSegundos": 8,
+      "fontes": ["holmes2017"],
+      "notas": "**[AÇÃO]** Avance e não fale nada. A música baixa sozinha por 8 segundos, o braço da vitrola levanta, o disco para e a serra volta a ser uma linha reta.\nDepois do silêncio: “Segundo a pesquisadora Holly Holmes, a letra de ‘Hoje é Dia de El-Rey’ nunca foi cantada nem gravada. Obrigado.”"
+    },
+    {
+      "id": "referencias",
+      "tipo": "referencias",
+      "tema": "papel",
+      "titulo": "Referências",
+      "creditos": "Tipografia: Big Shoulders Display e Newsreader (SIL Open Font License). Letra de “Hoje é Dia de El-Rey”: Márcio Borges; música: Milton Nascimento. Áudio usado apenas para fins educacionais.",
+      "notas": "“As referências estão na tela. Alguma pergunta?” Deixem este slide parado durante as perguntas. Se alguém quiser ouvir de novo, aperte Home e clique no disco."
+    }
+  ]
+}

@@ -1,0 +1,89 @@
+{
+  "_leia": "Cada fonte tem uma chave (ex.: coan2020). Os slides citam as chaves; o slide 'Referências' lista todas, na ordem abaixo.",
+
+  "coan2020": {
+    "curta": "Coan (2020)",
+    "completa": "COAN, Emerson Ike. “Milagre dos peixes”: a censura e a voz de Milton Nascimento na sociedade do espetáculo brasileira. Revista Alterjor, São Paulo, v. 22, n. 2, p. 126–144, 2020. DOI: 10.11606/issn.2176-1507.v22i2p126-144.",
+    "url": "https://revistas.usp.br/alterjor/article/view/171008"
+  },
+  "silva2023": {
+    "curta": "Silva e Teixeira (2023)",
+    "completa": "SILVA, Lucas Mateus; TEIXEIRA, William. Cantando lo no dicho: un análisis de los aspectos estructurales y semánticos de la canción “Hoje É Dia de El Rey” de Milton Nascimento. Cuadernos de Música Iberoamericana, v. 36, p. 101–124, 2023. DOI: 10.5209/cmib.85691.",
+    "url": "https://revistas.ucm.es/index.php/CMIB/article/view/85691"
+  },
+  "holmes2017": {
+    "curta": "Holmes (2017)",
+    "completa": "HOLMES, Holly L. Milton Nascimento and the Clube da Esquina: popular music, politics, and fraternity during Brazil’s military dictatorship (1964-85). Tese (Doutorado) – University of Illinois at Urbana-Champaign, 2017.",
+    "url": "https://www.ideals.illinois.edu/items/102383"
+  },
+  "herdy2015": {
+    "curta": "Herdy (2015)",
+    "completa": "HERDY, Thiago. O encontro que a censura impediu: Milton Nascimento e Dorival Caymmi. Documentos Revelados, 30 jul. 2015.",
+    "url": "https://documentosrevelados.com.br/o-encontro-que-a-censura-impediu-milton-nascimento-e-dorival-caymmi/"
+  },
+  "ai5": {
+    "curta": "AI-5 (1968)",
+    "completa": "BRASIL. Ato Institucional nº 5, de 13 de dezembro de 1968.",
+    "url": "https://www.planalto.gov.br/ccivil_03/ait/ait-05-68.htm"
+  },
+  "dl1077": {
+    "curta": "Decreto-Lei 1.077 (1970)",
+    "completa": "BRASIL. Decreto-Lei nº 1.077, de 26 de janeiro de 1970.",
+    "url": "https://www.planalto.gov.br/ccivil_03/decreto-lei/1965-1988/del1077.htm"
+  },
+  "ec11": {
+    "curta": "EC nº 11 (1978)",
+    "completa": "BRASIL. Emenda Constitucional nº 11, de 13 de outubro de 1978.",
+    "url": "https://www.planalto.gov.br/ccivil_03/constituicao/emendas/emc_anterior1988/emc11-78.htm"
+  },
+  "lei6683": {
+    "curta": "Lei 6.683 (1979)",
+    "completa": "BRASIL. Lei nº 6.683, de 28 de agosto de 1979 (Lei da Anistia).",
+    "url": "https://www.planalto.gov.br/ccivil_03/leis/l6683.htm"
+  },
+  "senado2015": {
+    "curta": "Agência Senado (2015)",
+    "completa": "AGÊNCIA SENADO. A madrugada mais longa da República faz 30 anos. Arquivo S, 2015.",
+    "url": "https://www12.senado.leg.br/noticias/especiais/arquivo-s/a-madrugada-mais-longa-da-republica-faz-30-anos"
+  },
+  "hrw2014": {
+    "curta": "HRW (2014)",
+    "completa": "HUMAN RIGHTS WATCH. Brasil: Comissão da Verdade expõe atrocidades da ditadura. 10 dez. 2014.",
+    "url": "https://www.hrw.org/pt/news/2014/12/10/brasil-comissao-da-verdade-expoe-atrocidades-da-ditadura"
+  },
+  "wikiMilton": {
+    "curta": "Wikipédia: Milton Nascimento",
+    "completa": "MILTON Nascimento. In: WIKIPÉDIA, a enciclopédia livre. Consultado em 20 out. 2026.",
+    "url": "https://pt.wikipedia.org/wiki/Milton_Nascimento"
+  },
+  "wikiMarcio": {
+    "curta": "Wikipédia: Márcio Borges",
+    "completa": "MÁRCIO Borges. In: WIKIPÉDIA, a enciclopédia livre. Consultado em 20 out. 2026.",
+    "url": "https://pt.wikipedia.org/wiki/M%C3%A1rcio_Borges"
+  },
+  "wikiBrant": {
+    "curta": "Wikipédia: Fernando Brant",
+    "completa": "FERNANDO Brant. In: WIKIPÉDIA, a enciclopédia livre. Consultado em 20 out. 2026.",
+    "url": "https://pt.wikipedia.org/wiki/Fernando_Brant"
+  },
+  "wikiDisco": {
+    "curta": "Wikipédia: Milagre dos Peixes",
+    "completa": "MILAGRE dos Peixes. In: WIKIPÉDIA, a enciclopédia livre. Consultado em 20 out. 2026.",
+    "url": "https://pt.wikipedia.org/wiki/Milagre_dos_Peixes"
+  },
+  "agbr2025": {
+    "curta": "Agência Brasil (2025)",
+    "completa": "AGÊNCIA BRASIL. Lô Borges, um dos fundadores do Clube da Esquina, morre aos 73 anos. 3 nov. 2025.",
+    "url": "https://agenciabrasil.ebc.com.br/cultura/noticia/2025-11/lo-borges-um-dos-fundadores-do-clube-da-esquina-morre-aos-73-anos"
+  },
+  "disco1973": {
+    "curta": "Milagre dos Peixes (1973)",
+    "completa": "NASCIMENTO, Milton. Milagre dos Peixes. Rio de Janeiro: EMI-Odeon, 1973. 1 LP e 1 compacto.",
+    "url": ""
+  },
+  "disco1974": {
+    "curta": "Milagre dos Peixes ao Vivo (1974)",
+    "completa": "NASCIMENTO, Milton; SOM IMAGINÁRIO. Milagre dos Peixes ao Vivo. EMI-Odeon, 1974.",
+    "url": ""
+  }
+}
